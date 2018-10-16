@@ -1,0 +1,81 @@
+/*Przejdź do pliku css i ostyluj element z id carousel tak, aby znajdował się na środku strony. 
+Określ mu też stałą szerokość i wysokość, oraz ustaw jego ramkę. Wymiary muszą być takie, jak jeden element z listy (np. 400 x 300). 
+Jak widzisz, obrazki wylewają się poza div. Napraw to za pomocą właściwości overflow.
+Lista elementów ul w karuzeli musi być odpowiednio szeroka: tyle, ile jest elementów w karuzeli 
+* szerokość jednego elementu (np. 400px * 5 = 2000px). Oprócz tego, należy zresetować właściwości,
+ które dla elementu ul domyślnie dobiera przeglądarka.
+Ostatnim elementem do ostylowania jest element listy (li). Ustaw go tak, aby zajmował tyle miejsca, ile obrazek. 
+Zresetuj jego domyślnie ustawioną wartość list-style na none i zmień opływanie (float) tych elementów tak, 
+aby były ustawione jeden obok drugiego.*/
+
+* {
+	box-sizing: border-box
+}
+section {
+	position: relative
+}
+#carousel {
+	margin: 0 auto;
+	width: 400px;
+	height: 265px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: blue;
+	overflow: hidden
+}
+#carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 2000px;
+	height: 100%
+}
+#carousel ul li {
+	float: left;
+	width: 400px;
+	height: 265px
+}
+img {
+	width: 100%;
+	max-width: 400px;
+	height: auto
+}
+/*Dorób po bokach przyciski służące do zmiany slajdu.
+Dodaj kontrolki (mogą być kółka) wskazujące, który slajd jest aktualnie wyświetlany (np. aktualny slajd to pełne kółko, a pozostałe są puste).
+Zrób tak, żeby kliknięcie w kontrolkę przewijało karuzelę tak, by widoczny był slajd do niej przypisany*/
+
+.overlay {
+	position: absolute;
+	width: 400px;
+	height: 265px;
+	top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+.overlay a {
+	display: block;
+	height: 100%;
+	width: 100px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: 40px;
+	color: red;
+	padding: 18px
+}
+.overlay .left-carousel-control {
+	-ms-flex-pack: start;
+	justify-content: flex-start
+}
+.overlay .right-carousel-control {
+	-ms-flex-pack: end;
+	justify-content: flex-end
+}

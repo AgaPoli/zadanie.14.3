@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+ <!-- W pliku html stwórz <div> z parametrem id ustawionym na carousel. Ten element będzie kontenerem całej naszej karuzeli.
+Wewnątrz niego stwórz listę elementów (<ul>) do wyświetlenia w karuzeli przykładowo pięciu elementów (<li>) po 400px każdy.
+Do każdego elementu dodaj obrazek. Pamiętaj, żeby odpowiednio dobrać właściwości obrazka. Musi dobrze wyglądać w pojedynczym elemencie listy. -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery carousel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+</head>
+
+<body>
+
+    <section>
+        <div id="carousel">
+            <ul>
+                <li>
+                    <img src="https://images.pexels.com/photos/1502418/pexels-photo-1502418.jpeg?cs=srgb&dl=abstract-abstract-painting-acrylic-paint-1502418.jpg&fm=jpg"
+                        alt="first image">
+                </li>
+                <li>
+                    <img src="https://images.pexels.com/photos/1507551/pexels-photo-1507551.jpeg?cs=srgb&dl=abstract-abstract-painting-acrylic-paint-1507551.jpg&fm=jpg"
+                        alt="second image">
+                </li>
+                <li>
+                    <img src="https://images.pexels.com/photos/1502305/pexels-photo-1502305.jpeg?cs=srgb&dl=abstract-abstract-painting-acrylic-paint-1502305.jpg&fm=jpg"
+                        alt="third image">
+                </li>
+                <li>
+                    <img src="https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?cs=srgb&dl=abstract-abstract-painting-acrylic-paint-1509534.jpg&fm=jpg"
+                        alt="fourth image">
+                </li>
+                <li>
+                    <img src="https://images.pexels.com/photos/1495321/pexels-photo-1495321.jpeg?cs=srgb&dl=abstract-abstract-painting-acrylic-paint-1495321.jpg&fm=jpg"
+                        alt="fifth image">
+                </li>
+            </ul>
+        </div>
+        <div class="overlay">
+            <!-- Controls  Dorób po bokach przyciski służące do zmiany slajdu.
+Dodaj kontrolki (mogą być kółka) wskazujące, który slajd jest aktualnie wyświetlany
+(np. aktualny slajd to pełne kółko, a pozostałe są puste).
+Zrób tak, żeby kliknięcie w kontrolkę przewijało karuzelę tak,
+by widoczny był slajd do niej przypisany. -->
+            <a class="left-carousel-control" href="#">
+                    <i class="fas fa-angle-left"></i>
+            </a>
+            <a class="right-carousel-control" href="#">
+                    <i class="fas fa-angle-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
